@@ -33,4 +33,16 @@ export class Tab1Page {
     });
     await alert.present();
   }
+
+  onRenderItems($event) {
+    console.log($event);
+
+    const item = this.shoppingList.items.splice($event.detail.from, 1)[0];
+
+    this.shoppingList.items.splice($event.detail.to, 0, item);
+
+    $event.detail.complete();
+    console.log(this.shoppingList.items);
+  }
+
 }  
