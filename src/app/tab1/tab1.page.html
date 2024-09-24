@@ -6,7 +6,7 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item [disabled]="shoppingList.isEmpty">
+      <ion-item (click)="removeAll()" [disabled]="shoppingList.isEmpty">
         <ion-icon slot="start" name="trash"></ion-icon>
         <ion-label>Eliminar todos los artículos</ion-label>
       </ion-item>
