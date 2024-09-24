@@ -8,4 +8,9 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-item>
+    <ion-input label="Objeto" type="text" [(ngModel)]="item" name="item"></ion-input>
+    <ion-button [disabled]="!item" (click)="addItem()"><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+  </ion-item>
+
 </ion-content>
